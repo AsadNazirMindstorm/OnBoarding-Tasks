@@ -4,7 +4,8 @@
     "./src/utilities/storage.utility.ts",
     "./src/constant.ts",
     "./src/authRPC.ts",
-    "./src/userState.ts"
+    "./src/userState.ts",
+    "./src/leaderboard.ts"
   ],
   "compilerOptions": {
     "target": "ES5", 
