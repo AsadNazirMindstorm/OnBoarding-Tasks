@@ -1,7 +1,10 @@
 {
   "files": [
     "./src/main.ts",
-    "./src/utilities/storage.utility.ts"
+    "./src/utilities/storage.utility.ts",
+    "./src/constant.ts",
+    "./src/authRPC.ts",
+    "./src/userState.ts"
   ],
   "compilerOptions": {
     "target": "ES5", 

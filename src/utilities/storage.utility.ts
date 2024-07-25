@@ -1,22 +1,12 @@
 class StorageUtility {
-    constructor() {
-        console.debug("Storage Utilities Object is Created")
-    }
+    public writeStorage(userId:string, nk: nkruntime.Nakama, CollectionName: string, CollectionKey: string, Values: any): any {
 
-    public writeStorage(ctx: nkruntime.Context, logger: nkruntime.Logger, nk: nkruntime.Nakama, CollectionName: string, CollectionKey: string, Values: Object): any {
-
-        logger.info("Collection Name: " + CollectionName);
-        logger.info("Key : " + CollectionKey);
-
-        //Craete a Write Request
         let writeData: nkruntime.StorageWriteRequest =
         {
             collection: CollectionName,
             key: CollectionKey,
-            permissionRead: 1,
-            permissionWrite: 0,
             value: Values,
-            userId: ctx.userId,
+            userId: userId,
         }
 
         //Writing the Values
@@ -25,8 +15,17 @@ class StorageUtility {
         return status;
     }
 
-    public readStorage(ctx: nkruntime.Context, logger: nkruntime.Logger, nk: nkruntime.Nakama, payload: string) {
-        logger.info("Read Storage is working");
+    public readStorage(userId:string, nk: nkruntime.Nakama, CollectionName: string, CollectionKey: string) {
+        let readData:nkruntime.StorageReadRequest=
+        {
+            collection:CollectionName,
+            key:CollectionKey,
+            userId:userId
+        }
+
+        let res = nk.storageRead([readData]);
+
+        return res;
     }
 
 
