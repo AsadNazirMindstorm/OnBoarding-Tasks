@@ -16,10 +16,11 @@ class UserState {
 
         //if userstate is not passed to this funnction than it is default value for the state
         if(userState===undefined || userState===null) _userState={
-            xp:0,
-            coins:100,
-            level:1
+            xp:Constants.USER_STATE_DEFAULT_XP,
+            coins:Constants.USER_STATE_DEFAULT_COINS,
+            level:Constants.USER_STATE_DEFAULT_LVL
         }
+        
         else _userState = userState;
 
         //make  a read request via Storage Utilities
