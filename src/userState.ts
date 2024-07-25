@@ -20,7 +20,7 @@ class UserState {
             coins:Constants.USER_STATE_DEFAULT_COINS,
             level:Constants.USER_STATE_DEFAULT_LVL
         }
-        
+
         else _userState = userState;
 
         //make  a read request via Storage Utilities
@@ -35,7 +35,6 @@ class UserState {
         //make  a read request via Storage Utilities
         let S: StorageUtility = new StorageUtility();
 
-        //returning whatever is written
         return S.readStorage(userId, nk, Constants.USER_COLLECTION, Constants.USER_STATE_KEY);
 
     }
