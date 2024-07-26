@@ -5,7 +5,9 @@
     "./src/constant.ts",
     "./src/authRPC.ts",
     "./src/userState.ts",
-    "./src/leaderboard.ts"
+    "./src/leaderboardRPC.ts",
+    "./src/Leaderboard.ts",
+    "./src/matchRPC.ts"
   ],
   "compilerOptions": {
     "target": "ES5", 

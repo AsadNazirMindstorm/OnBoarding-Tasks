@@ -1,7 +1,7 @@
 interface IuserState {
-    xp?: number
-    coins?: number
-    level?: number
+    xp: number
+    coins: number
+    level: number
 }
 
 
