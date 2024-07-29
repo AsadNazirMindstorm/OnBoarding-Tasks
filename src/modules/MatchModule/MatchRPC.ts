@@ -13,7 +13,7 @@ let matchEnd: nkruntime.RpcFunction = function (ctx: nkruntime.Context, logger: 
 
         //Calculating score
         const score:number = matchObj.scoreCalculator(newUserState.level,newUserState.xp);
-        const response = nk.leaderboardRecordWrite(Constants.LEADBOARD_NAME,ctx.userId,ctx.username,newUserState.level);
+        const response = nk.leaderboardRecordWrite(Constants.LEADBOARD_NAME,ctx.userId,ctx.username,score);
 
         //updating user state 
         const userStateObj:State = new State();
