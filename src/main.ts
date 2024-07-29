@@ -9,14 +9,12 @@ let InitModule: nkruntime.InitModule =
 
             //creating the leader
             leaderboardObj.createLeaderBoard(Constants.LEADBOARD_NAME,nk);
-
-
-            //RPCs
+            //RPCs  
             initializer.registerRpc("authRPC", customAuthRpc);
             initializer.registerRpc("getLeaderboardRPC", getLeaderboardRPC)
             initializer.registerRpc("matchEndRPC", matchEnd);
         }
         catch (error: any) {
-            logger.warn("Error Occured in Initialization")
+            logger.warn("Error Occured in Initialization : "+ error.message)
         }
     }
