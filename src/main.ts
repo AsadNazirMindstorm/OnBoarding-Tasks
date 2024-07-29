@@ -1,11 +1,22 @@
 
 let InitModule: nkruntime.InitModule =
     function (ctx: nkruntime.Context, logger: nkruntime.Logger, nk: nkruntime.Nakama, initializer: nkruntime.Initializer) {
-        logger.debug("This is Hello World RPC !!!!!!!!!!!")
 
-        // let Auth:AuthRPC = new AuthRPC();
+        try {
+            logger.debug("Initilaizing")
 
-        initializer.registerRpc("CutsomAuth", customAuthRpc);
-        initializer.registerRpc("GetLeaderBoard",getLeaderboardRPC)
-        initializer.registerRpc("MatchEnd",matchEnd);
+            let leaderboardObj:LeaderBoardStorage = new LeaderBoardStorage();
+
+            //creating the leader
+            leaderboardObj.createLeaderBoard(Constants.LEADBOARD_NAME,nk);
+
+
+            //RPCs
+            initializer.registerRpc("authRPC", customAuthRpc);
+            initializer.registerRpc("getLeaderboardRPC", getLeaderboardRPC)
+            initializer.registerRpc("matchEndRPC", matchEnd);
+        }
+        catch (error: any) {
+            logger.warn("Error Occured in Initialization")
+        }
     }

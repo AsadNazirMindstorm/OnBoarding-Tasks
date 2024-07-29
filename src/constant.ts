@@ -16,3 +16,10 @@ class Constants {
    public static readonly LEADBOARD_NAME="Global"
 
 }
+
+interface Iresponse 
+{
+   status:string
+   errorCode?:string
+   message:string
+}

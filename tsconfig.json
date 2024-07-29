@@ -1,13 +1,20 @@
 {
   "files": [
     "./src/main.ts",
-    "./src/utilities/storage.utility.ts",
+    "src/utilities/StorageUtility.ts",
     "./src/constant.ts",
-    "./src/authRPC.ts",
-    "./src/userState.ts",
-    "./src/leaderboardRPC.ts",
-    "./src/Leaderboard.ts",
-    "./src/matchRPC.ts"
+    "./src/modules/AuthModule/AuthInterfaces.ts",
+    "./src/modules/AuthModule/AuthRPC.ts",
+    "./src/modules/AuthModule/AuthStorage.ts",
+    "./src/modules/StateModule/StateStorage.ts",
+    "./src/modules/StateModule/StateInterfaces.ts",
+    "./src/modules/LeaderBoardModule/LeaderboardRPC.ts",
+    "./src/modules/LeaderBoardModule/LeaderBoardInterfaces.ts",
+    "./src/modules/LeaderBoardModule/LeaderBoardStorage.ts",
+    "./src/modules/MatchModule/MatchRPC.ts",
+    "./src/modules/MatchModule/MatchStorage.ts",
+    "./src/modules/MatchModule/MatchInterfaces.ts"
+
   ],
   "compilerOptions": {
     "target": "ES5", 
