@@ -11,6 +11,11 @@ let matchEnd: nkruntime.RpcFunction = function (ctx: nkruntime.Context, logger: 
         //Creating an instance of match class
         let matchObj:MatchStorage = new MatchStorage();
 
+        if(newUserState.level == undefined)
+            newUserState.level=1;
+        if (!newUserState.xp)
+            newUserState.xp=1;
+
         //Calculating score
         const score:number = matchObj.scoreCalculator(newUserState.level,newUserState.xp);
         const response = nk.leaderboardRecordWrite(Constants.LEADBOARD_NAME,ctx.userId,ctx.username,score);
