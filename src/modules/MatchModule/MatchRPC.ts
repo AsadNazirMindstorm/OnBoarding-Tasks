@@ -21,7 +21,7 @@ let matchEnd: nkruntime.RpcFunction = function (ctx: nkruntime.Context, logger: 
 
         //Leader Board response
         const res:ImatchResponse = {
-            status:"Success",
+            success:true,
             message:"Record entered successfully",
             data:response
         }
@@ -37,7 +37,7 @@ let matchEnd: nkruntime.RpcFunction = function (ctx: nkruntime.Context, logger: 
         //error response
         const errorRes:ImatchResponse={
             message:error.message,
-            status:"error"
+            success:false
         }
         return JSON.stringify
         (
