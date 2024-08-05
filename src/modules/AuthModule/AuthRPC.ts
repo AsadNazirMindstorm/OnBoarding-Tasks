@@ -39,7 +39,7 @@ let customAuthRpc: nkruntime.RpcFunction = function (ctx: nkruntime.Context, log
         //Auth Response 
         let response :IauthRes=
         {
-            status:"Authenticated",
+            success:true,
             message:"User has been authenticated",
             userId:res.userId,
             data: user[0].value
@@ -53,7 +53,7 @@ let customAuthRpc: nkruntime.RpcFunction = function (ctx: nkruntime.Context, log
     catch (error: any) {
         let errorRes:IauthRes=
         {     
-            status:"Error",
+            success:false,
             message:error.message,
             userId:ctx.userId
         }

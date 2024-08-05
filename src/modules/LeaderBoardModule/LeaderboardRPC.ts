@@ -21,12 +21,13 @@ let getLeaderboardRPC: nkruntime.RpcFunction = function (ctx: nkruntime.Context,
         //should we create a leaderboard if it does not exist or return an error ?
         if (leaderboards.length == 0) {
            
+            const res:ILeaderBoardResponse ={
+                success:false,
+                message:"No LeaderBoad Found"
+            }
             //throwing an error if leaderboard does not exist
             return JSON.stringify(
-                {
-                    message: "No Leaderboards Found",
-                    status: "Error"
-                }
+               res
             )
         }
 
@@ -37,7 +38,7 @@ let getLeaderboardRPC: nkruntime.RpcFunction = function (ctx: nkruntime.Context,
         //LeaderBoard response
         const res: ILeaderBoardResponse =
         {
-            status: "Succuess",
+            success: true,
             message:"Records fetched successfully",
             data:leaderBoardRecords
         }
@@ -49,7 +50,7 @@ let getLeaderboardRPC: nkruntime.RpcFunction = function (ctx: nkruntime.Context,
 
         //Error Response 
         const errorRes: ILeaderBoardResponse = {
-            status: "Error Occured",
+            success: false,
             message: error.message,
         }
         return JSON.stringify(

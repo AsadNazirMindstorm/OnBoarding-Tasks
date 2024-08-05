@@ -19,7 +19,7 @@ class Constants {
 
 interface Iresponse 
 {
-   status:string
+   success:boolean
    errorCode?:string
    message:string
 }
