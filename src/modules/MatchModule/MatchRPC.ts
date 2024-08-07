@@ -12,9 +12,9 @@ let matchEnd: nkruntime.RpcFunction = function (ctx: nkruntime.Context, logger: 
         let matchObj:MatchStorage = new MatchStorage();
 
         if(newUserState.level == undefined)
-            newUserState.level=1;
+            newUserState.level=Constants.USER_STATE_DEFAULT_LVL;
         if (!newUserState.xp)
-            newUserState.xp=1;
+            newUserState.xp=Constants.USER_STATE_DEFAULT_XP;
 
         //Calculating score
         const score:number = matchObj.scoreCalculator(newUserState.level,newUserState.xp);

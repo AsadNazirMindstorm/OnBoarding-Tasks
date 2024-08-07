@@ -6,13 +6,17 @@ let InitModule: nkruntime.InitModule =
             logger.debug("Initilaizing")
 
             let leaderboardObj:LeaderBoardStorage = new LeaderBoardStorage();
+            const configObj:ConfigurationModule = new ConfigurationModule();
 
+            //Saving the co
+            configObj.saveConfigurations(nk);
             //creating the leader
             leaderboardObj.createLeaderBoard(Constants.LEADBOARD_NAME,nk);
             //RPCs  
             initializer.registerRpc("authRPC", customAuthRpc);
             initializer.registerRpc("getLeaderboardRPC", getLeaderboardRPC)
             initializer.registerRpc("matchEndRPC", matchEnd);
+            initializer.registerRpc("getconfigRPC", getConfigRpc);
         }
         catch (error: any) {
             logger.warn("Error Occured in Initialization : "+ error.message)
