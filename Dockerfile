@@ -14,6 +14,7 @@ COPY src/modules/LeaderBoardModule/*.ts src/modules/LeaderBoardModule/
 COPY src/modules/StateModule/*.ts src/modules/StateModule/
 COPY src/modules/MatchModule/*.ts src/modules/MatchModule/
 COPY src/modules/ConfigurationModule/*.ts src/modules/ConfigurationModule/
+COPY src/modules/StorageModule/*.ts src/modules/StorageModule/
 
 # COPY src/modules/StateModule/*.ts src/modules/StateModule/
 RUN npx tsc
