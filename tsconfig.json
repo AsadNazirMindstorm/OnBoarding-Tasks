@@ -18,7 +18,9 @@
     "./src/modules/ChatModule/ChatRPC.ts",
     "./src/modules/ConfigurationModule/ConfigurationRPC.ts",
     "./src/modules/ConfigurationModule/ConfigurationModule.ts",
-    "./src/modules/ConfigurationModule/ConfigurationInterface.ts"
+    "./src/modules/ConfigurationModule/ConfigurationInterface.ts",
+    "./src/modules/StorageModule/Storage.ts",
+    "./src/modules/StorageModule/StorageInterface.ts"
   ],
   "compilerOptions": {
     "target": "ES5",

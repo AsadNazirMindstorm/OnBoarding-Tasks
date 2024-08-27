@@ -17,6 +17,7 @@ let InitModule: nkruntime.InitModule =
             initializer.registerRpc("getLeaderboardRPC", getLeaderboardRPC)
             initializer.registerRpc("matchEndRPC", matchEnd);
             initializer.registerRpc("getconfigRPC", getConfigRpc);
+            initializer.registerRpc("storageRpc", storageRpc);
         }
         catch (error: any) {
             logger.warn("Error Occured in Initialization : "+ error.message)

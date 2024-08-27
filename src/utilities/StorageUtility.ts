@@ -1,5 +1,5 @@
 class StorageUtility {
-    public writeStorage(userId:string, nk: nkruntime.Nakama, CollectionName: string, CollectionKey: string, Values: any): any {
+    public writeStorage(userId:string | undefined, nk: nkruntime.Nakama, CollectionName: string, CollectionKey: string, Values: any) {
 
         let writeData: nkruntime.StorageWriteRequest =
         {
