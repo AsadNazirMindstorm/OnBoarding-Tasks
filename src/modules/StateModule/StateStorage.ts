@@ -12,7 +12,7 @@ class State {
             coins:Constants.USER_STATE_DEFAULT_COINS,
             level:Constants.USER_STATE_DEFAULT_LVL
         }
-
+        
         //assignment of the new user state
         else userNewState = userState;
 
